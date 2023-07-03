@@ -61,7 +61,7 @@ public class RabbitmqSourceFunction extends RichParallelSourceFunction<RowData> 
             } else {
                 String json = "{\n" +
                         "  \"col1\": \"000000000\",\n" +
-                        "  \"col2\": \"1\"\n" +
+                        "  \"col2\": \"000000000\"\n" +
                         "}";
                 RowData rowData = deserializationSchema.deserialize(json.getBytes());
                 ctx.collect(rowData);
